@@ -7,12 +7,14 @@ var tasks = [
     },
 
     {
-        description: '',
+        description: 'convert string to number',
         converter: function() {
             return 0;
         },
-        input: null
-    }
+        input: '123'
+    },
+
+
 ];
 
 
@@ -37,7 +39,7 @@ function callback(i, e) {
    console.log('---------------------------------------------');
 }
 
-function forEach(array, func) { //некий массив, некая функция, аргументі, потому что мы не знаем
+function forEach(array, func) { //некий массив, некая функция, аргументі, потому что мы не знаем, принимает массив и функцию, с чьей помощью обрабатывает каждый элемент массива
     for (var i = 0; i < array.length; i++) {
         func(i, array[i]);
     }
