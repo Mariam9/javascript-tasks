@@ -22,7 +22,7 @@ function itoa1(value) {
     return '' + value;
 }
 
-function atoi(value) {
+function atoiExplicitConversion(value) {
     return Number(value);
 }
 
