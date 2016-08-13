@@ -36,7 +36,7 @@ function atoiParsedInt(value) {
     // if(beginsFromNotAnumber(value)) {
     //     value = cut(value);
     // }
-    var parsedNumber = parseInt(value);
+    var parsedNumber = parseInt(value); 
     if(isNaN(parsedNumber)) {
         return 0;
     }
