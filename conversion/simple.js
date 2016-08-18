@@ -19,9 +19,15 @@ var tasks = [
        input: 'x12'         
     },
 
+    {
+       description: 'convert string to float',
+       converter: atof,
+       input: '9.9'
+    }
 
 ];
-
+// input: string begins with a float number, output: float number ('9.9' = 9.9)
+// input: string begins with a 
 
 
 function itoa1(value) {
@@ -32,6 +38,7 @@ function atoiExplicitConversion(value) {
     return Number(value);
 }
 
+
 function atoiParsedInt(value) {
     // if(beginsFromNotAnumber(value)) {
     //     value = cut(value);
@@ -40,7 +47,15 @@ function atoiParsedInt(value) {
     if(isNaN(parsedNumber)) {
         return 0;
     }
-    return parsedNumber;
+    return parsedFloat;
+}
+
+function atof(value) {
+    var parsedFloat = parseFloat(value); 
+    if(isNaN(parsedFloat)) {
+        return 0;
+    }
+    return parsedFloat;
 }
 
 //  ctr k c, ctrl k u
@@ -75,4 +90,4 @@ function forEach(array, func) { //некий массив, некая функц
 // контракт - то, что обязуется сделать и вернуть функция, при условии передачи параметров, описыввет, как может повести себя функция в зависимости от переданных аргументов
 //глобальная переменная менее приоритетная, чем переменная, опредлененная в функции
 //если в функции укзан вар - создается новая переменная, которая перетирает значение глобальной. если внутри функции нет вар, значит используется уже существующая глобальная переменная
-// null - специальное значение, которое имеет смысл «ничего» или «значение неизвестно», но переменная считается определенной, undefined - переменная неопределена
+// null - специальное значение, которое имеет смысл «ничего» или «значение неизвестно», но переменная считается определенной, undefined - переменная не определена
