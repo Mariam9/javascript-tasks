@@ -23,6 +23,14 @@ var tasks = [
        description: 'convert string to float',
        converter: atof,
        input: '9.9'
+    }, 
+
+    {
+        description: 'itoa without built in functionality',
+        converter: function() {
+                    }
+            ,
+        input: '-118'
     }
 
 ];
@@ -32,6 +40,15 @@ var tasks = [
 
 function itoa1(value) {
     return '' + value;
+}
+
+function itoa2(value) {
+    if(number) {
+        return string;
+    }
+    else {
+        return 0;
+    }
 }
 
 function atoiExplicitConversion(value) {
